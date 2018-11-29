@@ -16,7 +16,7 @@ public class AVLs {
      */
     public static void main(String[] args) {
         
-        System.out.println("Inicio"); //removivel
+        System.out.println("Inicio");
         
         while(true){
             switch(Input.readInt("1. Inserir"
@@ -26,19 +26,19 @@ public class AVLs {
                     + "\n Escolha uma Opcao: ")){
 
                 case 1:
-                    System.out.println("\nIniciando Inserir");//removivel
+                    System.out.println("\nIniciando Inserir");
                     
                     break;
                 case 2:
-                    System.out.println("Iniciando Remover");//removivel
+                    System.out.println("Iniciando Remover");
                     
                     break;
                 case 3:
-                    System.out.println("Iniciando Buscar");//removivel
+                    System.out.println("Iniciando Buscar");
                     
                     break;
                 case 0:
-                    System.out.println("\n SAINDO.");//removivel
+                    System.out.println("\n SAINDO.");
                     System.exit(0);
                     break;
                 default:
