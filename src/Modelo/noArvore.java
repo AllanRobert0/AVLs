@@ -11,12 +11,12 @@ package Modelo;
  */
 public class noArvore {
     
-    private int Info,Ball;
+    private int Info,Bal;
     private noArvore Eprox,Dprox;
 
     public noArvore(int Info) {
         this.Info = Info;
-        this.Ball = 0;
+        this.Bal = 0;
         this.Eprox = null;
         this.Dprox = null;
     }
@@ -29,12 +29,12 @@ public class noArvore {
         this.Info = Info;
     }
 
-    public int getBall() {
-        return Ball;
+    public int getBal() {
+        return Bal;
     }
 
-    public void setBall(int Ball) {
-        this.Ball = Ball;
+    public void setBal(int Bal) {
+        this.Bal = Bal;
     }
 
     public noArvore getEprox() {

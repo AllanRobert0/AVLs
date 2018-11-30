@@ -19,6 +19,23 @@ public class ArvoreAVL {
         this.P = null;
     }
     
+    
     //funções da arvore
+
+    public boolean getH() {
+        return h;
+    }
+
+    public void setH(boolean h) {
+        this.h = h;
+    }
+
+    public noArvore getP() {
+        return P;
+    }
+
+    public void setP(noArvore P) {
+        this.P = P;
+    }
     
 }
