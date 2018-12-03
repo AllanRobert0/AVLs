@@ -26,6 +26,7 @@ public class AVLs {
                     + "\n3. Buscar"
                     + "\n4. Conta Nos"
                     + "\n5. Imprime Arvore"
+                    + "\n6. Busca"
                     + "\n0. Sair"
                     + "\n Escolha uma Opcao: ")){
 
@@ -51,7 +52,17 @@ public class AVLs {
                 case 5:
                     System.out.println("Iniciando Improme Arvore\n");
                     ArvoreAVL.ImprimeArvore(arvore.getP(), 0);
-                    break;     
+                    break;
+                case 6:
+                    System.out.println("Iniciando Busca\n");
+                    if(
+                        arvore.Busca(Input.readInt("\n Digite Numero Busca: "), arvore.getP()) == 1){
+                        System.out.println("\n !Encontrado!");
+                    }else{
+                        System.out.println("\n !NAO Encontrado!");
+                    }
+                    
+                    break;    
                 case 0:
                     System.out.println("\n SAINDO.");
                     System.exit(0);

@@ -190,4 +190,16 @@ public class ArvoreAVL {
             System.out.println("");
         }
     }
+    
+    public static int Busca(int x, noArvore p){        
+        if(p == null){
+            return 0;
+        }else if(p.getInfo() == x){
+            return 1;
+        }else if(x < p.getInfo()){
+            return Busca(x, p.getEprox());
+        }else{
+            return Busca(x, p.getDprox());
+        }        
+    }
 }
