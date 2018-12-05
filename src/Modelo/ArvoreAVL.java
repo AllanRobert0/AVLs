@@ -173,7 +173,7 @@ public class ArvoreAVL {
         if(p == null){
             return 0;
         }else{
-        System.out.println("\nNo:"+p.getInfo());
+        //System.out.println("\nNo:"+p.getInfo());
         return 1 + ContaNos(p.getEprox())+ ContaNos(p.getDprox());
         }
     }
@@ -202,4 +202,71 @@ public class ArvoreAVL {
             return Busca(x, p.getDprox());
         }        
     }
+    
+/*    public static int Remove(int x, noArvore p, noArvore f){//esta removendo sem precisar retornar o no alterado
+        if(f == null){
+            return 0;
+        }//else if(p.getInfo() == f.getInfo()){
+        //p = null;
+        //return 1;
+        //}
+        else if(f.getInfo() == x){//no a ser removido encontrado
+            
+            if(f.getDprox() == null && f.getEprox() == null){ //e uma folha
+                
+                if(p.getDprox() == f){//verifica em qual lado esta o filho
+                    p.setDprox(null);
+                }else{
+                    p.setEprox(null);
+                }
+                
+            }else if(f.getEprox() == null){//esquerda e nulo
+                
+            }else{//direita e nulo
+            
+            }            
+            return 1;
+        }else if(x < p.getInfo()){
+            return Remove(x, f,f.getEprox());
+        }else{
+            return Remove(x, f,f.getDprox());
+        }
+    } */
+    
+    
+    public static noArvore Remove(int x, noArvore p){//esta removendo sem precisar retornar o no alterado
+        if(p == null)
+            return p;        
+        else if(p.getDprox() == null && p.getEprox() == null){//arvore possui apenas um elemento
+            if(p.getInfo() == x){                
+                System.out.println("    !Removido - Arvore Vazia!");
+                return null;
+            }
+        }else if(x < p.getInfo()){
+            if(p.getEprox().getInfo() == x){//no a ser removido encontrado, e e o proximo a esquerda
+                
+                if(p.getEprox().getDprox() == null && p.getEprox().getEprox() == null){//e uma folha
+                    p.setEprox(null);
+                    System.out.println("    !Removido kk!");
+                }
+            return p;
+            }else
+            //return Remove(x, p);
+            p.setEprox(Remove(x, p.getEprox()));
+        }else{
+            if(p.getDprox().getInfo() == x){//no a ser removido encontrado, e e o proximo a direita
+                
+                if(p.getDprox().getEprox() == null && p.getDprox().getDprox() == null){//e uma folha
+                    p.setDprox(null);
+                    System.out.println("    !Removido kk!");
+                }
+            return p;
+            }else
+            //return Remove(x, p);
+            p.setDprox(Remove(x, p.getDprox()));
+        }
+        return p;
+    }    
+    
+    
 }
